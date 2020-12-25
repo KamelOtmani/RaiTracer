@@ -1,3 +1,3 @@
 #pragma once
 
-#define TEST_CONFIG 0
+#define TEST_CONFIG_ 1
