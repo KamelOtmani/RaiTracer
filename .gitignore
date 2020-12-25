@@ -1,3 +1,9 @@
+# custom 
+*.vcxproj.user
+*.vcxproj.filters
+.vs/*
+Debug/*
+
 # Prerequisites
 *.d
 
