@@ -1,7 +1,8 @@
 #include <iostream>
 
+#include "RaiTracer.h"
 
-int main()
+int main(void)
 {
     std::cout << "Hello wolrd" << std::endl;
     std::cin.get();
