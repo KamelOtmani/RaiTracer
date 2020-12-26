@@ -1,5 +1,6 @@
 #pragma once
 #include "OpenGL/OpenGL.h"
+#include "Application.h"
 
 class Window
 {
@@ -13,7 +14,11 @@ public:
 
     void PollEvents();
 
+    void StartFrame();
+
     void UpdateWindow();
+
+    void EndFrame();
 
     void Terminate();
 
@@ -23,5 +28,7 @@ private:
     unsigned int m_Height = 900;
     
     GLFWwindow* handle;
+    ApplicationLayer* m_AppLayer;
+    //ImGuiLayer m_ImGuiLayer;
 };
 

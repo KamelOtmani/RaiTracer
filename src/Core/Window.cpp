@@ -26,6 +26,7 @@ bool Window::InitContext()
         return false;
     }
 
+    m_AppLayer = new ApplicationLayer(handle, 1600, 900);
     /* Make the window's context current */
     glfwMakeContextCurrent(handle);
 
@@ -33,7 +34,13 @@ bool Window::InitContext()
     {
         std::cout << " ERROR GLEW INIT IS NOT OK" << std::endl;
     }
+    
+    // Attach Layers
+    m_AppLayer->OnAttach();
+    
     return true;
+
+
 }
 
 
@@ -43,13 +50,26 @@ void Window::PollEvents()
     glfwPollEvents();
 }
 
+void Window::StartFrame()
+{
+    m_AppLayer->OnStartFrame();
+}
+
 void Window::UpdateWindow()
 {
+    m_AppLayer->OnUpdate();
     glfwSwapBuffers(handle);
+}
+
+void Window::EndFrame()
+{
+    m_AppLayer->OnEndFrame();
 }
 
 void Window::Terminate()
 {
+    m_AppLayer->OnDettach();
+
     glfwDestroyWindow(handle);
     glfwTerminate();
 }

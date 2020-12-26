@@ -214,7 +214,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\Rendering\Framebuffer.cpp" />
+    <ClCompile Include="src\Rendering\Renderer.cpp" />
+    <ClCompile Include="src\Core\Application.cpp" />
     <ClCompile Include="src\EntryPoint.cpp" />
+    <ClCompile Include="src\UI\ImGuiLayer.cpp" />
     <ClCompile Include="vendor\glm\detail\glm.cpp" />
     <ClCompile Include="vendor\imGui\imgui.cpp" />
     <ClCompile Include="vendor\imGui\imgui_demo.cpp" />
@@ -223,11 +227,16 @@
     <ClCompile Include="vendor\imGui\imgui_impl_opengl3.cpp" />
     <ClCompile Include="vendor\imGui\imgui_tables.cpp" />
     <ClCompile Include="vendor\imGui\imgui_widgets.cpp" />
-    <ClCompile Include="src\Window.cpp" />
+    <ClCompile Include="src\Core\Window.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Core\Layer.h" />
+    <ClInclude Include="src\Rendering\Framebuffer.h" />
+    <ClInclude Include="src\Rendering\Renderer.h" />
+    <ClInclude Include="src\Core\Application.h" />
     <ClInclude Include="src\OpenGL\OpenGL.h" />
     <ClInclude Include="src\RaiTracer.h" />
+    <ClInclude Include="src\UI\ImGuiLayer.h" />
     <ClInclude Include="vendor\glew\include\GL\eglew.h" />
     <ClInclude Include="vendor\glew\include\GL\glew.h" />
     <ClInclude Include="vendor\glew\include\GL\glxew.h" />
@@ -527,7 +536,7 @@
     <ClInclude Include="vendor\stb_image\stb_image.h" />
     <ClInclude Include="vendor\stb_image\stb_image_resize.h" />
     <ClInclude Include="vendor\stb_image\stb_image_write.h" />
-    <ClInclude Include="src\Window.h" />
+    <ClInclude Include="src\Core\Window.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="vendor\glew\doc\advanced.html" />
