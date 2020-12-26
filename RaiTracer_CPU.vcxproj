@@ -214,11 +214,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\Rendering\Ray.cpp" />
+    <ClCompile Include="src\Rendering\Scene.cpp" />
+    <ClCompile Include="src\Rendering\Camera.cpp" />
     <ClCompile Include="src\Rendering\Framebuffer.cpp" />
     <ClCompile Include="src\Rendering\Renderer.cpp" />
     <ClCompile Include="src\Core\Application.cpp" />
     <ClCompile Include="src\EntryPoint.cpp" />
     <ClCompile Include="src\UI\ImGuiLayer.cpp" />
+    <ClCompile Include="src\Utility\ImageUtility.cpp" />
+    <ClCompile Include="src\Utility\Math.cpp" />
     <ClCompile Include="vendor\glm\detail\glm.cpp" />
     <ClCompile Include="vendor\imGui\imgui.cpp" />
     <ClCompile Include="vendor\imGui\imgui_demo.cpp" />
@@ -230,6 +235,11 @@
     <ClCompile Include="src\Core\Window.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Rendering\IHitable.h" />
+    <ClInclude Include="src\Rendering\HitRecord.h" />
+    <ClInclude Include="src\Rendering\Ray.h" />
+    <ClInclude Include="src\Rendering\Scene.h" />
+    <ClInclude Include="src\Rendering\Camera.h" />
     <ClInclude Include="src\Core\Layer.h" />
     <ClInclude Include="src\Rendering\Framebuffer.h" />
     <ClInclude Include="src\Rendering\Renderer.h" />
@@ -237,6 +247,9 @@
     <ClInclude Include="src\OpenGL\OpenGL.h" />
     <ClInclude Include="src\RaiTracer.h" />
     <ClInclude Include="src\UI\ImGuiLayer.h" />
+    <ClInclude Include="src\Utility\ImageUtility.h" />
+    <ClInclude Include="src\Utility\Math.h" />
+    <ClInclude Include="src\Utility\Vector3.h" />
     <ClInclude Include="vendor\glew\include\GL\eglew.h" />
     <ClInclude Include="vendor\glew\include\GL\glew.h" />
     <ClInclude Include="vendor\glew\include\GL\glxew.h" />

@@ -8,6 +8,7 @@ Window::Window()
 
 Window::~Window()
 {
+    delete m_AppLayer;
 }
 
 bool Window::InitContext()

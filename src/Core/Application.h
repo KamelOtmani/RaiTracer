@@ -2,6 +2,7 @@
 
 #include "Layer.h"
 #include "UI/ImGuiLayer.h"
+#include "Rendering/Renderer.h"
 
 class ApplicationLayer : public Layer
 {
@@ -16,7 +17,7 @@ public:
 	virtual void OnDettach()		override;
 
 private:
-
+	Renderer sRenderer;
 	ImGuiLayer* m_imGuiLayer;
 };
 

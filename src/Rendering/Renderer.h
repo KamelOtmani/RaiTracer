@@ -1,4 +1,5 @@
 #pragma once
+#include "Framebuffer.h"
 
 struct RenderSettings
 {
@@ -14,7 +15,14 @@ public:
     Renderer();
     ~Renderer();
 
+    void SetupRenderer(RenderSettings& desc);
+
+    void RenderScene();
+
+    void RenderUI();
+
 private:
-    
+    RenderSettings mySettings;
+    Framebuffer* tmpBuffer;
 };
 
